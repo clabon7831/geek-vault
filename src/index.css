@@ -1,0 +1,15 @@
+#bodyContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.card {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+}
