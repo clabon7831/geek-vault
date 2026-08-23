@@ -1,10 +1,10 @@
 import { mockMovies } from "../test-data/mock-movies"
 import MovieCard from '../components/MovieCard'
 
-function Movies() {
+function Movies({ addToInventory}) {
     const moviesJSX = mockMovies.map((movie) => {
-        return <MovieCard movie={movie} />
-    })
+        return <MovieCard movie={movie} addToInventory={addToInventory}/>}
+    )
 
     return (
             <>

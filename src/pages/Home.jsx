@@ -17,16 +17,20 @@ function Home() {
                         <p>Find movies and add them to your inventory.</p>
                     </Card>
                 </Link>
+                
+                <Link to= "/comic">
+                    <Card clickable={true}>
+                        <h2>Comics</h2>
+                        <p>Find comics and add them to your inventory.</p>
+                    </Card>
+                </Link>
 
-                <Card>
-                    <h2>Comics</h2>
-                    <p>Find comics and add them to your inventory.</p>
-                </Card>
-
-                <Card>
+                <Link to= "/inventory">
+                <Card clickable={true}>
                     <h2>Inventory</h2>
                     <p>View and manage the movies and comics you own.</p>
                 </Card>
+                </Link>
             </div>
         </>
     )

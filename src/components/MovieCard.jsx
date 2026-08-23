@@ -1,6 +1,6 @@
 import Card from './Card'
 
-function MovieCard({ movie }) {
+function MovieCard({ movie, addToInventory }) {
   return (
     <Card clickakable={true}>
       <img
@@ -19,7 +19,9 @@ function MovieCard({ movie }) {
           <br />
           Description: {movie.description}
           <br />
-          <button>Add to Inventory</button>
+          <button onClick={() => addToInventory(movie)}>
+             Add to Inventory
+          </button>
       </p>
     </Card>
   )

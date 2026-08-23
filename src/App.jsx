@@ -1,3 +1,4 @@
+import { useState } from 'react'  
 import { Routes, Route } from 'react-router'
 import './App.css'
 import Navbar from './components/Navbar'
@@ -9,6 +10,12 @@ import Inventory from './pages/Inventory'
 
 function App() {
  
+  const [inventory, setInventory] = useState([])
+  
+  function addToInventory(movie) {
+    setInventory([...inventory, movie])
+  }
+
   return (
     <div id="bodyContainer">
       <Navbar />
@@ -16,14 +23,15 @@ function App() {
       <main className="mainContent">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movies" element={<Movies />} />
+          <Route path="/movies" element={<Movies addToInventory={addToInventory} />} />
           <Route path="/comics" element={<Comics />} />
-          <Route path="/inventory" element={<Inventory />} />
+          <Route path="/inventory" element={<Inventory inventory={inventory} />} />
         </Routes>
       </main>
 
       <Footer />
     </div>
+
   )
 }
 
