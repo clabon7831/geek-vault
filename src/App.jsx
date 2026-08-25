@@ -13,7 +13,17 @@ function App() {
   const [inventory, setInventory] = useState([])
   
   function addToInventory(movie) {
-    setInventory([...inventory, movie])
+    let alreadyAdded = false
+
+    for (let item of inventory) {
+        if (item.id === movie.id) {
+            alreadyAdded = true
+        }
+    }
+
+    if (alreadyAdded === false) {
+        setInventory([...inventory, movie])
+    }
   }
 
 
