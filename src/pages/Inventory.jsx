@@ -1,19 +1,31 @@
 import Card from "../components/Card"
 
-function Inventory({ inventory }) {
+function Inventory({ inventory, deleteFromInventory}) {
 
-    const inventoryJSX = inventory.map((movie) => {
-    return <h2>{movie.title}</h2>}
+    const inventoryMovieJSX = inventory.map((movie) => {
+    return <div>
+                <img 
+                    className="movieInventoryImage"
+                    src={movie.image}
+                    alt = {movie.title}
+                />
+                <h2>{movie.title}</h2>
+                <button onClick={() => deleteFromInventory(movie)}>
+                    Delete
+                </button>
+            </div>}
     )
 
     return (
-            <>
+            <Card>
                 <h1>The Vault</h1>
                 <Card>
                     <h2>My Movies</h2>
-                    {inventoryJSX}
+                    <div>
+                    {inventoryMovieJSX}
+                    </div>
                 </Card>
-            </>
+            </Card>
     )
 }
 
