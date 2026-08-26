@@ -40,7 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies addToInventory={addToInventory} />} />
-          <Route path="/comics" element={<Comics />} />
+          <Route path="/comics" element={<Comics addToInventory={addToInventory} />} />
           <Route path="/inventory" element={<Inventory inventory={inventory} deleteFromInventory={deleteFromInventory} />} />
         </Routes>
       </main>

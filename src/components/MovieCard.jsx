@@ -2,7 +2,7 @@ import Card from './Card'
 
 function MovieCard({ movie, addToInventory }) {
   return (
-    <Card clickakable={true}>
+    <Card clickable={true}>
       <img
           className="movieImage"
           src={movie.image}
