@@ -1,17 +1,40 @@
 .movieImage {
     width: 150px;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .movieInventoryImage {
     width: 150px;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 4px; ;
     gap: 8px;
     overflow-x: auto;
     padding: 10px 0px;
 }
 
+.comicImage {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+}
 
+.comicInventoryImage {
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 4px; ;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 0px;
+}
+
+.inventoryRow {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.inventoryRow > div {
+    width: 220px;
+}
