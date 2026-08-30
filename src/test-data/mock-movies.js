@@ -23,7 +23,7 @@ const mockMovies = [
         id: 2,
         title: "The Batman",
         year: 2022,
-        genre: "Crime",
+        genre: "Action",
         director: "Matt Reeves",
         description: "Batman investigates a series of crimes threatening Gotham City.",
         image: batmanImage

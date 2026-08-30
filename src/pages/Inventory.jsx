@@ -3,13 +3,13 @@ import Card from "../components/Card"
 function Inventory({ inventory, deleteFromInventory }) {
 
     const movies = inventory.filter((item) => item.director)
-
     const comics = inventory.filter((item) => item.publisher)
-
+    
     const inventoryMovieJSX = movies.map((movie) => {
+
         return (
-            <div>
-                <img 
+            <div className="inventoryItem" key={movie.id}>
+                <img
                     className="movieInventoryImage"
                     src={movie.image}
                     alt={movie.title}
@@ -26,8 +26,8 @@ function Inventory({ inventory, deleteFromInventory }) {
 
     const inventoryComicJSX = comics.map((comic) => {
         return (
-            <div>
-                <img 
+            <div className="inventoryItem" key={comic.id}>
+                <img
                     className="comicInventoryImage"
                     src={comic.image}
                     alt={comic.title}
@@ -42,23 +42,34 @@ function Inventory({ inventory, deleteFromInventory }) {
         )
     })
 
-    
     return (
-        <>
+    <>
+        <div className="inventoryHeader">
             <h1>The Vault</h1>
+            <p>YOUR PERSONAL COLLECTION</p>
+        </div>
 
-            <Card>
+        <section className="inventorySection">
+            <div className="inventorySectionTitle">
                 <h2>My Movies</h2>
-                <div className="inventoryRow">{inventoryMovieJSX}</div>
-            </Card>
+            </div>
 
-            <Card>
+            <div className="movieInventoryRow">
+                {inventoryMovieJSX}
+            </div>
+        </section>
+
+        <section className="inventorySection">
+            <div className="inventorySectionTitle">
                 <h2>My Comics</h2>
-                <div className="inventoryRow">{inventoryComicJSX}</div>
-            </Card>
-        </>
-    )
-}
+            </div>
 
+            <div className="inventoryRow">
+                {inventoryComicJSX}
+            </div>
+        </section>
+    </>
+)
+}
 
 export default Inventory
