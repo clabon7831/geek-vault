@@ -1,7 +1,7 @@
 function Footer() {
     return (
-        <footer>
-            Geekvault
+        <footer className="footer">
+            GeekVault  |  Built by Christopher Labon 
         </footer>
     )
 }

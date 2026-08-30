@@ -6,11 +6,19 @@ function Comics({ addToInventory}) {
         return <ComicCard comic={comic} addToInventory={addToInventory}/>})
 
     return (
-            <>
-                <h1>Comics</h1>
-                {comicsJSX}
-            </>
-    )
+    <div className="comicspage">
+
+        <div className="comicsheader">
+            <h1>Comics</h1>
+            <p>Explore new comics and build your personal collection.</p>
+        </div>
+
+        <div className="comicgrid">
+            {comicsJSX}
+        </div>
+
+    </div>
+)
 }
 
 export default Comics

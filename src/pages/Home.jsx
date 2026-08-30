@@ -1,38 +1,46 @@
 import Card from "../components/Card"
-import {Link} from "react-router"
+import { Link } from "react-router"
 
 function Home() {
     return (
-        <>
-            <h1>Welcome to GeekVault</h1>
+        <div className="home">
+            
+            <div className="home-hero">
+                <h1>Build Your Fortress of Fandom</h1>
+                <p>
+                    Track your movies and comics, organize your collection, and protect what you love.
+                </p>
+            </div>
 
-            <p>
-                Build and manage your personal movie and comic collection.
-            </p>
-
-            <div>
-                <Link to= "/movies">
-                    <Card clickable={true}>
+            <div className="homelink">
+                
+                <Link to="/movies">
+                    <Card linkStyle={true}>
                         <h2>Movies</h2>
-                        <p>Find movies and add them to your inventory.</p>
+                        <p> Discover movies and add them to your inventory.</p>
+                        <p1>Explore Movies →</p1>
                     </Card>
                 </Link>
                 
-                <Link to= "/comic">
-                    <Card clickable={true}>
+                <Link to="/comics">
+                    <Card linkStyle={true}>
                         <h2>Comics</h2>
-                        <p>Find comics and add them to your inventory.</p>
+                        <p>Find comics and track your collection.</p>
+                        <p1>Explore Comics →</p1>
                     </Card>
                 </Link>
 
-                <Link to= "/inventory">
-                <Card clickable={true}>
-                    <h2>Inventory</h2>
-                    <p>View and manage the movies and comics you own.</p>
-                </Card>
+                <Link to="/inventory">
+                    <Card linkStyle={true}>
+                        <h2>The Vault</h2>
+                        <p>View and manage Everything you own.</p>
+                        <p1>View Inventory →</p1>
+                    </Card>
                 </Link>
+
             </div>
-        </>
+
+        </div>
     )
 }
 

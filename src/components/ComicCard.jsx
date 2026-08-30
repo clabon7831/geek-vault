@@ -2,7 +2,7 @@ import Card from './Card'
 
 function ComicCard({ comic, addToInventory }) {
   return (
-    <Card clickable={true}>
+    <Card linkStyle={true}>
       <img
           className="comicImage"
           src={comic.image}
@@ -18,7 +18,7 @@ function ComicCard({ comic, addToInventory }) {
           Writer: {comic.writer}
           <br />
           <button onClick={() => addToInventory(comic)}>
-             Add to Inventory
+             +Inventory
           </button>
       </p>
     </Card>

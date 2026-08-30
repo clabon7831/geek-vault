@@ -1,6 +1,6 @@
-function Card({ children, clickable }) {
+function Card({ children, linkStyle }) {
     return (
-        <div className={ `card ${clickable ? "clickabl-card" : ""}`}>
+        <div className={ `card ${linkStyle ? "linkStyle-card" : ""}`}>
             {children}
         </div>
     )
