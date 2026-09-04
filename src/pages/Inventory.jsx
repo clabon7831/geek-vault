@@ -49,6 +49,12 @@ function Inventory({ inventory, deleteFromInventory }) {
             <p>YOUR PERSONAL COLLECTION</p>
         </div>
 
+        <div className="emptyVault">
+            {inventory.length === 0 && (
+                <p>Your vault is currently empty.</p>
+            )}
+        </div>
+
         <section className="inventorySection">
             <div className="inventorySectionTitle">
                 <h2>My Movies</h2>

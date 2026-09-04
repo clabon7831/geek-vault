@@ -23,11 +23,13 @@ function Navbar() {
                 <Link to="/inventory">
                     <button>Inventory</button>
                 </Link>
+
+                <Link to="/about">
+                    <button>About</button>
+                </Link>
             </div>
 
-            <div className="login">
-                    <button>Login</button>
-            </div>
+            
         </nav>
     )
 }

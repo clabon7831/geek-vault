@@ -238,6 +238,19 @@ display: block;
     margin-bottom: 0px;
 }
 
+.emptyVault {
+ width: fit-content;
+    margin: 0 auto 40px;
+    padding: 12px 20px;
+    color: rgba(255, 174, 0, 0.869);
+    background-color: #1b1b20;
+    border: 1px solid rgba(255, 174, 0, 0.869);
+    border-radius: 6px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
 .inventoryHeader p {
     font-family: "Orbitron", sans-serif;
     font-weight: 700;

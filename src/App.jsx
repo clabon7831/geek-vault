@@ -7,6 +7,7 @@ import Comics from './pages/Comics'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Inventory from './pages/Inventory'
+import About from './pages/About'
 
 function App() {
  
@@ -42,6 +43,7 @@ function App() {
           <Route path="/movies" element={<Movies addToInventory={addToInventory} />} />
           <Route path="/comics" element={<Comics addToInventory={addToInventory} />} />
           <Route path="/inventory" element={<Inventory inventory={inventory} deleteFromInventory={deleteFromInventory} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
 
