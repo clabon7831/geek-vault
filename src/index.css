@@ -100,3 +100,32 @@ body {
   object-fit: cover;
   display: block;
 }
+/*https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+/* Phone screen */
+@media (max-width: 500px) {
+    .moviegrid,
+    .comicgrid {
+        grid-template-columns: 180px;
+    }
+
+    .homelink {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainContent {
+        padding: 15px;
+    }
+}
+/* Tablet screen */
+@media (max-width: 900px) {
+    .moviegrid,
+    .comicgrid {
+        grid-template-columns: repeat(2, 180px);
+        justify-content: center;
+    }
+
+    .homelink {
+        flex-wrap: wrap;
+    }
+}

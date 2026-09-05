@@ -1,4 +1,5 @@
 import Card from './Card'
+import Button from "./Button"
 
 function MovieCard({ movie, addToInventory }) {
   return (
@@ -15,9 +16,9 @@ function MovieCard({ movie, addToInventory }) {
           <br />
            Genre: {movie.genre}
           <br />
-          <button onClick={() => addToInventory(movie)}>
+          <Button onClick={() => addToInventory(movie)}>
              +Inventory
-          </button>
+          </Button>
       </p>
     </Card>
   )

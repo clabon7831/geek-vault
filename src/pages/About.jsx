@@ -4,8 +4,7 @@ function About() {
             <h1>About GeekVault</h1>
 
             <p>
-                GeekVault helps fans discover movies and comics and organize
-                their personal collection.
+             GeekVault helps fans discover movies and comics, build their collection, and keep everything organized in one place.
             </p>
         </div>
     )

@@ -1,4 +1,5 @@
 import Card from './Card'
+import Button from "./Button"
 
 function ComicCard({ comic, addToInventory }) {
   return (
@@ -17,9 +18,9 @@ function ComicCard({ comic, addToInventory }) {
           <br />
           Writer: {comic.writer}
           <br />
-          <button onClick={() => addToInventory(comic)}>
+          <Button onClick={() => addToInventory(comic)}>
              +Inventory
-          </button>
+          </Button>
       </p>
     </Card>
   )

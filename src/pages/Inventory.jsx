@@ -1,4 +1,5 @@
 import Card from "../components/Card"
+import Button from "../components/Button"
 
 function Inventory({ inventory, deleteFromInventory }) {
 
@@ -17,9 +18,9 @@ function Inventory({ inventory, deleteFromInventory }) {
 
                 <h2>{movie.title}</h2>
 
-                <button onClick={() => deleteFromInventory(movie)}>
+                <Button onClick={() => deleteFromInventory(movie)}>
                     Delete
-                </button>
+                </Button>
             </div>
         )
     })
@@ -35,9 +36,9 @@ function Inventory({ inventory, deleteFromInventory }) {
 
                 <h2>{comic.title}</h2>
 
-                <button onClick={() => deleteFromInventory(comic)}>
+                <Button onClick={() => deleteFromInventory(comic)}>
                     Delete
-                </button>
+                </Button>
             </div>
         )
     })
@@ -49,11 +50,11 @@ function Inventory({ inventory, deleteFromInventory }) {
             <p>YOUR PERSONAL COLLECTION</p>
         </div>
 
-        <div className="emptyVault">
-            {inventory.length === 0 && (
+       {inventory.length === 0 && (
+            <div className="emptyVault">
                 <p>Your vault is currently empty.</p>
-            )}
-        </div>
+            </div>
+        )}
 
         <section className="inventorySection">
             <div className="inventorySectionTitle">
